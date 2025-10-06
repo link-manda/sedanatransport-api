@@ -28,10 +28,11 @@ class OrderController extends Controller
                 $customer = Customer::firstOrCreate(
                     ['email' => $validatedData['email_pelanggan']],
                     [
-                        'nama' => $validatedData['nama_pelanggan'],
+                        // DISESUAIKAN: Menggunakan nama kolom yang benar
+                        'nama_lengkap' => $validatedData['nama_pelanggan'],
                         'no_telepon' => $validatedData['telepon_pelanggan'],
                         'alamat' => $validatedData['alamat_pelanggan'],
-                        'ktp' => $validatedData['ktp_pelanggan'],
+                        'nomor_ktp' => $validatedData['ktp_pelanggan'],
                     ]
                 );
 
